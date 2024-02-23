@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes
+app.use("/", (req, res) => {
+  res.send("Cointab assignment server run");
+});
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
